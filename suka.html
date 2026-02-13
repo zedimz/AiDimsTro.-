@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>destro temen curhat</title>
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #020617;
+  height: 100vh;
+  display: flex;
+  color: white;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 260px;
+  background: #020617;
+  border-right: 1px solid #1e293b;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img { width: 40px; }
+.logo h1 { font-size: 18px; color: #38bdf8; }
+
+.sidebar img.hero {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.sidebar p {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* ===== ICONS ===== */
+.icons {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.icons a {
+  width: 38px;
+  height: 38px;
+  background: #1e293b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: iconGlow 6s linear infinite;
+}
+
+.icons a:nth-child(1) { animation-delay: 0s; }
+.icons a:nth-child(2) { animation-delay: 2s; }
+.icons a:nth-child(3) { animation-delay: 4s; }
+
+.icons img {
+  width: 18px;
+  animation: iconColor 6s linear infinite;
+}
+
+@keyframes iconGlow {
+  0%   { box-shadow: 0 0 8px #22c55e; }
+  33%  { box-shadow: 0 0 8px #38bdf8; }
+  66%  { box-shadow: 0 0 8px #a855f7; }
+  100% { box-shadow: 0 0 8px #22c55e; }
+}
+
+@keyframes iconColor {
+  0%   { filter: invert(55%) sepia(90%) saturate(400%) hue-rotate(90deg); }
+  33%  { filter: invert(65%) sepia(90%) saturate(500%) hue-rotate(180deg); }
+  66%  { filter: invert(70%) sepia(90%) saturate(600%) hue-rotate(260deg); }
+  100% { filter: invert(55%) sepia(90%) saturate(400%) hue-rotate(90deg); }
+}
+
+/* ===== CHAT ===== */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #1e293b;
+  font-weight: bold;
+}
+
+.messages {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.msg {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  line-height: 1.5;
+}
+
+.user {
+  background: #2563eb;
+  align-self: flex-end;
+}
+
+.ai {
+  background: #1e293b;
+  align-self: flex-start;
+}
+
+/* ===== LOADING (KEYFRAMES) ===== */
+.loading {
+  display: flex;
+  gap: 6px;
+}
+
+.loading span {
+  width: 8px;
+  height: 8px;
+  background: #94a3b8;
+  border-radius: 50%;
+  animation: dot 1.4s infinite ease-in-out both;
+}
+
+.loading span:nth-child(2) { animation-delay: .2s; }
+.loading span:nth-child(3) { animation-delay: .4s; }
+
+@keyframes dot {
+  0% { transform: translateY(0); opacity: .3; }
+  20% { transform: translateY(-6px); opacity: 1; }
+  40% { transform: translateY(0); opacity: .3; }
+  100% { opacity: .3; }
+}
+
+/* ===== INPUT ===== */
+.input-box {
+  display: flex;
+  border-top: 1px solid #1e293b;
+}
+
+input {
+  flex: 1;
+  padding: 16px;
+  background: #020617;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+button {
+  padding: 0 26px;
+  border: none;
+  background: #38bdf8;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+    <h1>DESTRO-AI</h1>
+  </div>
+
+  <img class="hero" src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+
+  <p>
+    AI buatan destro .<br>
+    kelebihan backend<br>
+    Frontend:
+    pengembang gadungan
+    
+    manipulasi identitas, privasi data maka kamu akan aman 
+    cita cita hacking && greyhat
+    
+    my idol @lordhozo,@buts_ploit,@nst_ploit
+    kelas super atasan
+    
+  </p>
+
+  <div class="icons">
+    <a href="https://wa.me/6295404399397" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+    </a>
+    <a href="https://tiktok.com/@mas_destro" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png">
+    </a>
+    <a href="dimasdeveloper12@gmail.com">
+      <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png">
+    </a>
+  </div>
+</div>
+
+<!-- CHAT -->
+<div class="chat-container">
+  <div class="chat-header">💬 Chat AI</div>
+  <div class="messages" id="messages"></div>
+
+  <div class="input-box">
+    <input id="input" placeholder="Ketik pesan..." />
+    <button onclick="sendMessage()">Kirim</button>
+  </div>
+</div>
+
+<script>
+const WEBHOOK_URL = "https://destrochatai.app.n8n.cloud/webhook/a753f31b-3168-4137-b26f-747b15e4c78c";
+
+const messages = document.getElementById("messages");
+const input = document.getElementById("input");
+
+function addMessage(text, type) {
+  const div = document.createElement("div");
+  div.className = "msg " + type;
+  div.innerText = text;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function addLoading() {
+  const div = document.createElement("div");
+  div.className = "msg ai";
+  div.id = "loading";
+  div.innerHTML = `
+    <div class="loading">
+      <span></span><span></span><span></span>
+    </div>
+  `;
+  messages.appendChild(div);
+}
+
+async function sendMessage() {
+  const text = input.value.trim();
+  if (!text) return;
+
+  addMessage(text, "user");
+  input.value = "";
+  addLoading();
+
+  try {
+    const res = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: text })
+    });
+
+    const reply = await res.text();
+    document.getElementById("loading").remove();
+    addMessage(reply, "ai");
+
+  } catch {
+    document.getElementById("loading").remove();
+    addMessage("❌ Gagal konek ke AI", "ai");
+  }
+}
+</script>
+
+</body>
+</html>
